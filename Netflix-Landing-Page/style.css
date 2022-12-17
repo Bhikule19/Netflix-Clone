@@ -86,6 +86,9 @@ select {
   justify-items: end;
   width: 100%;
   padding: 1.5rem 3rem;
+  height: 4rem;
+  position: relative;
+  z-index: 1;
 }
 .logo {
   justify-self: start;
@@ -93,8 +96,38 @@ select {
   height: 2.8125rem;
   width: 10.4375rem;
   fill: red;
+  line-height: normal;
 }
 .btns {
   justify-self: end;
   align-self: center;
+}
+
+.btns .lang {
+  background: transparent;
+  padding: 0.5rem 0.1rem 0.5rem 1.2rem;
+  position: relative;
+}
+
+.btns i {
+  position: absolute;
+  top: 2.4rem;
+  right: 14.8rem;
+}
+
+.btns a {
+  text-decoration: none;
+  border: 1px solid red;
+  padding: 0.5rem 1.3rem;
+  background-color: #e50914;
+  color: #fff;
+  border-radius: 3px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 95%;
+  }
 }
