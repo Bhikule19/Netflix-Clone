@@ -77,6 +77,11 @@ select {
   }
 }
 
+body {
+  background-color: #000;
+  color: #fff;
+}
+
 .header-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -87,7 +92,7 @@ select {
   width: 100%;
   padding: 1.5rem 3rem;
   height: 4rem;
-  position: relative;
+  position: absolute;
   z-index: 1;
 }
 .logo {
@@ -101,12 +106,14 @@ select {
 .btns {
   justify-self: end;
   align-self: center;
+  color: #fff;
 }
 
 .btns .lang {
   background: transparent;
   padding: 0.5rem 0.1rem 0.5rem 1.2rem;
   position: relative;
+  color: #fff;
 }
 
 .btns i {
@@ -126,8 +133,99 @@ select {
   cursor: pointer;
 }
 
+.bg-hero .bg-hero__img img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  /* opacity: 1; */
+}
+
+.bg-hero {
+  position: relative;
+}
+
+.bg-hero .bg-hero__gradient {
+  background: rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(0deg, transparent 50%, rgba(0, 0, 0, 0.7)),
+    radial-gradient(50% 100%, transparent 0, rgba(0, 0, 0, 0.7) 100%);
+  position: absolute;
+  inset: 0;
+}
+
+.hero-section {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  left: 50%;
+  max-width: 655px;
+  margin-left: -327.5px;
+}
+
+.hero-section h1,
+.hero-section h2,
+.hero-section p {
+  font-weight: normal;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.hero-section h2 {
+  font-size: 1.625rem;
+  margin-top: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+}
+
+.hero-section form {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  margin-top: 1rem;
+}
+
+form input {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+
+form button {
+  font-size: 1.625rem;
+  padding: 0 2rem;
+  width: auto;
+  background-color: #e50914;
+  background-image: linear-gradient(180deg, #e50914, #db0510);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+  color: #fff;
+  outline: none;
+  border: 0;
+  border-left: 1px solid #333;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #f40612;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+}
+
+/* ----------------------------
+-------Main--------------
+------------------------- */
+
+main section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 @media screen and (max-width: 780px) {
   html {
-    font-size: 95%;
+    font-size: 55%;
   }
 }
