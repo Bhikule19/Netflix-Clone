@@ -19,7 +19,6 @@ blockquote,
 dl,
 dd {
   margin: 0;
-  font-family: "Roboto", "Ubuntu", "Segeo UI", Helvetica, sans-serif;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -37,14 +36,21 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1;
+  font-family: "Roboto", "Ubuntu", "Segeo UI", Helvetica, sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
+a {
+  text-decoration: none;
+}
 
+li {
+  list-style: none;
+}
 /* Make images easier to work with */
 img,
 picture {
@@ -84,148 +90,416 @@ body {
 
 .header-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: ". .";
-  justify-items: end;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  padding: 1.4rem 1.8rem;
+  position: absolute;
   width: 100%;
-  padding: 1.5rem 3rem;
-  height: 4rem;
-  position: absolute;
-  z-index: 1;
-}
-.logo {
-  justify-self: start;
-  align-self: center;
-  height: 2.8125rem;
-  width: 10.4375rem;
-  fill: red;
-  line-height: normal;
-}
-.btns {
-  justify-self: end;
-  align-self: center;
-  color: #fff;
+  z-index: 5;
+  /* margin-bottom: 2rem; */
 }
 
-.btns .lang {
-  background: transparent;
-  padding: 0.5rem 0.1rem 0.5rem 1.2rem;
-  position: relative;
-  color: #fff;
+@media screen and (min-width: 550px) {
+  .header-container {
+    padding: 1.4rem 3.1rem;
+  }
 }
 
-.btns i {
-  position: absolute;
-  top: 2.4rem;
-  right: 14.8rem;
+.header-container a.logo {
+  display: block;
 }
 
-.btns a {
-  text-decoration: none;
-  border: 1px solid red;
-  padding: 0.5rem 1.3rem;
+.header-container .logo svg {
+  fill: #e50914;
+  height: 27px;
+}
+
+@media screen and (min-width: 550px) {
+  .header-container .logo svg {
+    height: 37px;
+  }
+}
+
+.header-container div + div {
+  text-align: right;
+}
+.header-container a.button {
   background-color: #e50914;
   color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 7px 17px;
   border-radius: 3px;
-  margin-left: 1rem;
-  cursor: pointer;
+}
+.header-container select {
+  background-color: transparent;
+  color: #fff;
+  padding: 6px 0 6px 20px;
+  border-radius: 3px;
 }
 
-.bg-hero .bg-hero__img img {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  /* opacity: 1; */
+.header-container div.select {
+  display: inline-block;
+  margin-right: 10px;
 }
 
-.bg-hero {
+@media screen and (min-width: 550px) {
+  .header-container a.button {
+    padding: 7px 17px;
+  }
+
+  .header-container div.select {
+    margin-right: 20px;
+    font-size: 0.875rem;
+  }
+}
+
+.header-container div.select i {
+  height: 20px;
+  fill: #fff;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 4px;
+}
+
+div.bg-hero {
   position: relative;
+  border-bottom: 8px solid #222;
 }
 
-.bg-hero .bg-hero__gradient {
-  background: rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(0deg, transparent 50%, rgba(0, 0, 0, 0.7)),
-    radial-gradient(50% 100%, transparent 0, rgba(0, 0, 0, 0.7) 100%);
+div.bg-hero div.gradient {
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0,
+    transparent 60%,
+    rgba(0, 0, 0, 0.8)
+  );
   position: absolute;
   inset: 0;
 }
 
-.hero-section {
+div.bg-hero div.bg {
   position: absolute;
+  z-index: 1;
   inset: 0;
+}
+
+div.bg-hero div.bg img {
+  /* max-width: 100%; */
+  height: 100%;
+  object-fit: cover;
+  /* opacity: 0.6; */
+}
+
+div.bg-hero div.content {
+  max-width: 655px;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  padding-inline: 20px;
+  margin: 0 auto;
+  /* position: absolute; */
+  /* inset: 0; */
+  /* left: 50%; */
+  /* margin-left: -327.5px; */
   display: grid;
   align-items: center;
   text-align: center;
-  left: 50%;
-  max-width: 655px;
-  margin-left: -327.5px;
+  position: relative;
+  z-index: 3;
 }
 
-.hero-section h1,
-.hero-section h2,
-.hero-section p {
+@media screen and (min-width: 550px) {
+  div.bg-hero div.content {
+    padding-top: 225px;
+    padding-bottom: 185px;
+  }
+}
+
+div.bg-hero h1,
+div.bg-hero h2,
+div.bg-hero h3 {
   font-weight: normal;
 }
 
-.hero-section h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  line-height: 1;
+div.bg-hero h1 {
+  font-size: 1.75rem;
+  font-weight: normal;
+  margin-top: 2rem;
+  /* max-width: 300px; */
+}
+div.bg-hero h2 {
+  font-size: 1.125rem;
+  margin-top: 13px;
+  margin-bottom: 29px;
+}
+div.bg-hero h3 {
+  font-size: 1.125rem;
 }
 
-.hero-section h2 {
-  font-size: 1.625rem;
-  margin-top: 1rem;
-  margin-bottom: 1.8rem;
+@media screen and (min-width: 550px) {
+  div.bg-hero h1 {
+    font-size: 3.125rem;
+    font-weight: bold;
+  }
+  div.bg-hero h2 {
+    font-size: 1.625rem;
+    margin-top: 13px;
+    margin-bottom: 29px;
+  }
+  div.bg-hero h3 {
+    font-size: 1.2rem;
+  }
 }
 
-.hero-section p {
-  font-size: 1.2rem;
-}
-
-.hero-section form {
+div.cta form {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr max-content;
-  margin-top: 1rem;
+  margin: 20px 20px 0;
+  grid-template-columns: 1fr;
+  row-gap: 15px;
 }
 
-form input {
-  padding: 0.8rem;
+@media screen and (min-width: 550px) {
+  div.cta form {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+  }
+}
+
+div.cta input {
+  padding: 11.8px 10px;
   font-size: 1.2rem;
+  width: 100%;
 }
-
-form button {
-  font-size: 1.625rem;
-  padding: 0 2rem;
-  width: auto;
+div.cta button {
+  font-size: 1.1rem;
+  padding: 12px 18px;
+  border-radius: 2px;
   background-color: #e50914;
-  background-image: linear-gradient(180deg, #e50914, #db0510);
-  box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
   color: #fff;
-  outline: none;
   border: 0;
-  border-left: 1px solid #333;
   cursor: pointer;
 }
 
-form button:hover {
-  background: #f40612;
-  box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
-}
-
-/* ----------------------------
--------Main--------------
-------------------------- */
-
-main section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-@media screen and (max-width: 780px) {
-  html {
-    font-size: 55%;
+@media screen and (min-width: 550px) {
+  div.cta button {
+    font-size: 1.625rem;
+    padding: 12px 26px;
+    border-radius: 0;
   }
+}
+
+div.bg-hero button:hover {
+  background-color: #d70812;
+}
+
+/* ----------------Section-------------- */
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 46px;
+  padding: 70px 35px;
+  align-items: center;
+  text-align: center;
+  border-bottom: 8px solid #222;
+}
+
+@media screen and (min-width: 550px) {
+  section {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}
+
+section.last {
+  border-bottom: 8px solid #222;
+}
+
+section div.texts h1 {
+  font-size: 1.625rem;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 550px) {
+  section div.texts h1 {
+    font-size: 3.125rem;
+  }
+}
+
+section div.texts p {
+  font-size: 1.125rem;
+}
+
+@media screen and (min-width: 550px) {
+  section div.texts p {
+    font-size: 1.625rem;
+  }
+}
+
+.media {
+  position: relative;
+}
+
+.media.s1 img {
+  width: 400px;
+}
+
+.media.s1 video {
+  width: 75%;
+  position: absolute;
+  top: 55px;
+  left: 45px;
+  margin-left: 1%;
+  margin-top: 1%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 550px) {
+  section:nth-child(even) div.texts {
+    order: 2;
+  }
+}
+
+section div.download {
+  border: 2px solid #666;
+  border-radius: 15px;
+  padding: 10px;
+  height: 95px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  /* bottom: 0px; */
+  width: 300px;
+  background-color: #000;
+  top: 65%;
+  left: 50%;
+  margin-left: -140px;
+  gap: 15px;
+  grid-template-columns: max-content 1fr max-content;
+}
+
+section div.download img {
+  height: 75px;
+  width: auto;
+}
+
+section div.download span {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0.3em 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.media.s3 img {
+  width: 400px;
+  position: relative;
+  z-index: 5;
+}
+
+.media.s3 video {
+  width: 62%;
+  position: absolute;
+  top: 20px;
+  left: 55px;
+  margin-top: -1%;
+  margin-left: 5%;
+}
+
+div.faq {
+  padding: 70px 30px;
+}
+
+div.faq h1 {
+  font-size: 1.625rem;
+  text-align: center;
+  margin-bottom: 40px;
+  /* margin-left: 2.5rem; */
+}
+
+@media screen and (min-width: 550px) {
+  div.faq h1 {
+    font-size: 3.125rem;
+  }
+}
+
+ul.questions {
+  max-width: 700px;
+  /* align-items: center; */
+  margin-inline: auto;
+  padding: 0;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 550px) {
+  ul.questions {
+    font-size: 1.625rem;
+  }
+}
+
+li.question {
+  position: relative;
+  background-color: #303030;
+  margin-bottom: 10px;
+}
+li.question svg {
+  width: 30px;
+  height: 30px;
+  right: 30px;
+  top: 20px;
+  position: absolute;
+  fill: #fff;
+  transform: rotate(45deg);
+  transition: all 0.4s ease;
+}
+li.question .header {
+  display: block;
+  padding: 20px 30px;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+li.question div.answer {
+  padding: 0 30px;
+  max-height: 0;
+  overflow: hidden;
+  transform: all 0.2s ease;
+}
+
+li.question input[type="checkbox"] {
+  display: none;
+}
+
+li.question input[type="checkbox"]:checked ~ div.answer {
+  padding: 30px 30px;
+  max-height: 600px;
+}
+
+li.question input[type="checkbox"]:checked ~ .header svg {
+  transform: rotate(180deg);
+}
+
+div.faq h3 {
+  text-align: center;
+  font-weight: 400;
+  max-width: 450px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 550px) {
+  div.faq h3 {
+    font-size: 1.5rem;
+  }
+}
+
+div.faq form {
+  max-width: 635px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+div.faq div + div {
+  text-align: center;
 }
