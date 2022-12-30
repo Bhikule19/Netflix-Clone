@@ -581,6 +581,7 @@ div.faq div + div {
 .footer .footer-cols > ul {
   display: grid;
   row-gap: 20px;
+  padding: 0;
 }
 
 .foooter li {
