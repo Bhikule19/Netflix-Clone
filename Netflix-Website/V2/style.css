@@ -148,11 +148,32 @@ header.black {
   margin-inline: 5rem;
   flex-direction: column;
   /* justify-content: center; */
-  max-width: 50%;
+  max-width: 65%;
   /* max-width: 100%; */
   padding-top: 100px;
 
   /* background-size: cover; */
+}
+
+@media screen and (max-width: 780px) {
+  .banner-content .banner-title {
+    font-size: 60px;
+    line-height: 1;
+  }
+  .banner-content .banner-info {
+    font-size: 16px;
+  }
+
+  .banner-content .banner-overview {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .banner-content .banner-title {
+    font-size: 45px;
+    line-height: 1;
+  }
 }
 
 .banner-title {
@@ -198,6 +219,12 @@ header.black {
 .action-button:last-child {
   background-color: rgba(109, 109, 110, 0.7);
   color: white;
+}
+
+@media screen and (max-width: 550px) {
+  .action-btns-container .action-button:last-child {
+    font-size: 14px;
+  }
 }
 
 .action-button svg {

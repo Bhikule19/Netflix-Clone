@@ -23,6 +23,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Netflix-Clone</title>
   </head>
   <body>
@@ -73,8 +74,12 @@
             membership.
           </h3>
           <form action="">
-            <div><input type="email" placeholder="Email Address" /></div>
-            <div><button>Get Started &gt;</button></div>
+            <div>
+              <input type="email" placeholder="Email Address" id="email1" />
+            </div>
+            <div>
+              <button type="submit" onclick="auth()">Get Started &gt;</button>
+            </div>
           </form>
         </div>
       </div>
@@ -341,8 +346,12 @@
         Ready to watch? Enter your email to create or restart your membership.
       </h3>
       <form action="">
-        <div><input type="email" placeholder="Email Address" /></div>
-        <div><button>Get Started &gt;</button></div>
+        <div>
+          <input type="email" placeholder="Email Address" id="email2" />
+        </div>
+        <div>
+          <button type="submit" onclick="auth()">Get Started &gt;</button>
+        </div>
       </form>
     </div>
     <footer class="footer">
@@ -395,7 +404,6 @@
         </ul>
         <ul>
           <li class="footer-link-item">
-            t
             <a href="">Speed Test</a>
           </li>
           <li class="footer-link-item">

@@ -355,6 +355,24 @@ section div.texts p {
   z-index: -1;
 }
 
+@media screen and (min-width: 900px) {
+  .media.s1 video {
+    width: 345px;
+  }
+}
+
+@media screen and (min-device-width: 500px) and (max-device-width: 779px) {
+  .media.s1 video {
+    width: 345px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .media.s1 video {
+    width: 80%;
+  }
+}
+
 @media screen and (min-width: 780px) {
   section:nth-child(even) div.texts {
     order: 2;
@@ -375,7 +393,7 @@ section div.download {
   background-color: #000;
   top: 65%;
   left: 50%;
-  margin-left: -140px;
+  margin-left: -150px;
   gap: 15px;
   grid-template-columns: max-content 1fr max-content;
 }
@@ -406,6 +424,18 @@ section div.download span {
   left: 55px;
   margin-top: -1%;
   margin-left: 3%;
+}
+
+@media screen and (min-device-width: 500px) and (max-device-width: 779px) {
+  .media.s3 video {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .media.s3 video {
+    width: 250px;
+  }
 }
 
 div.faq {
