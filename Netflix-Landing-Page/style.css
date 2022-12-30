@@ -402,6 +402,12 @@ section div.download {
   grid-template-columns: max-content 1fr max-content;
 }
 
+@media screen and (min-width: 1360px) {
+  section div.download {
+    margin-left: -180px;
+  }
+}
+
 section div.download img {
   height: 75px;
   width: auto;
