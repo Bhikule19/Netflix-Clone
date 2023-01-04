@@ -33,7 +33,9 @@ function buildBannerSection(movie) {
   const div = document.createElement("div");
   div.innerHTML = `
     <h2 class="banner-title">${movie.title}</h2>
-    <p class="banner-info">Trending in movies | Rating - ${movie.release_date}</p>
+    <p class="banner-info">Trending in movies | Ratings - ${movie.vote_average.toFixed(
+      1
+    )} / 10</p>
     <p class="banner-overview">${movie.overview}</p>
     <div class="action-btns-container">
       <button class="action-button">
