@@ -44,7 +44,8 @@ header.black {
 }
 
 .header-brand {
-  max-width: 110px;
+  max-width: 100%;
+  height: 80px;
   fill: red;
 }
 .main-nav {
@@ -141,6 +142,7 @@ header.black {
   height: 100vh;
   max-width: 100%;
   position: relative;
+  /* opacity: 1; */
 }
 
 .banner-content {
@@ -151,6 +153,7 @@ header.black {
   max-width: 65%;
   /* max-width: 100%; */
   padding-top: 100px;
+  /* z-index: 1000; */
 
   /* background-size: cover; */
 }
