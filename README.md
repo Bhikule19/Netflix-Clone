@@ -14,13 +14,13 @@ I created a responsive user experience by _dynamically retrieving and displaying
 
 ## Netflix Web App
 
-[Click here to view the project]()
-![https://netflix-clone.abhishekbhikule.repl.co/Netflix-Landing-Page/Netflix-Website/index.html](./Screenshot_20230101_200505.png)
+[Click here to view the project](https://netflix-clone.abhishekbhikule.repl.co/Netflix-Landing-Page/Netflix-Website/index.html)
+![](./Screenshot_20230101_200505.png)
 
 ## Netflix Landing Page
 
-[Click here to view the project]()
-![https://netflix-clone.abhishekbhikule.repl.co/Netflix-Landing-Page/index.html](./Screenshot_20230105_210541.png)
+[Click here to view the project](https://netflix-clone.abhishekbhikule.repl.co/Netflix-Landing-Page/index.html)
+![](./Screenshot_20230105_210541.png)
 
 > ## Some key takeaways from this project include:
 >
