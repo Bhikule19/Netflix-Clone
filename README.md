@@ -28,7 +28,7 @@ I created a responsive user experience by _dynamically retrieving and displaying
 
 ## Netflix Landing Page
 
-[Click here to view the project](https://netflix-lp-clone-abhi.netlify.app/)
+[Click here to view the project](https://lnkd.in/dCjjWunB)
 ![](./Screenshot_20230105_210541.png)
 
 > ## Key Points
